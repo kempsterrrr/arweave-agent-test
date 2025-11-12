@@ -1,0 +1,23 @@
+{
+  "name": "arweave-agent-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "agent0-sdk": "file:../agent0-ts/agent0-sdk-0.2.1.tgz",
+    "dotenv": "^17.2.3"
+  }
+}
