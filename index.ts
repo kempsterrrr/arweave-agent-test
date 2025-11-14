@@ -25,7 +25,7 @@ async function main() {
     rpcUrl: process.env.RPC_URL!,
     signer: process.env.PRIVATE_KEY!,
     arweave: true, // Enable Arweave with tagging
-    subgraphUrl: 'http://localhost:8000/subgraphs/name/agent0-sdk/agent0-sdk/graphql',
+    subgraphUrl: 'http://localhost:8000/subgraphs/name/agent0-sdk/agent0-sdk/graphql', // Local subgraph endpoint
   };
 
   console.log('✓ Configuration loaded');

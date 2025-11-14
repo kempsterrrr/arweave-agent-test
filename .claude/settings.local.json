@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm pack:*)",
+      "Bash(npm install)",
+      "Bash(npm start)",
+      "Bash(node -e \"const ethers = require(''ethers''); const wallet = new ethers.Wallet(''0x1915f656b28f6de1a151d6733f463c92357dd41e75bed9495e2f74fbca1e6c82''); console.log(''Wallet Address:'', wallet.address);\")",
+      "Bash(node -e \"const ethers = require(''ethers''); const wallet = new ethers.Wallet(''0x1b1c84d409f1804997046683068b1f1d3df176753b04868d0172d8fc45ab82a9''); console.log(''New Wallet Address:'', wallet.address);\")",
+      "Bash(npx tsx:*)",
+      "Bash(npm test)",
+      "Bash(docker --version:*)",
+      "Bash(npm run codegen:*)",
+      "Bash(docker logs:*)",
+      "Bash(wsl uname:*)",
+      "Bash(wsl ls:*)",
+      "Bash(curl:*)",
+      "Bash(md5sum:*)",
+      "WebSearch",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix: Make IPFS and Arweave data source creation mutually exclusive\n\nChanges:\n- identity-registry.ts: Changed sequential if statements to else if for IPFS/Arweave handling\n- reputation-registry.ts: Same mutually exclusive pattern for feedback URIs\n\nProblem:\n- Previously, both IPFS and Arweave data sources could be triggered for the same URI\n- This could cause indexing conflicts and incorrect URIType storage\n\nSolution:\n- Use else if to ensure only ONE data source is created per URI\n- Add clarifying comments about mutual exclusivity\n- Applies to both agent registration and feedback submission flows\n\nTesting:\n- Deploy to local graph-node on Ubuntu server for verification\n- Test ar:// URI indexing with agent registration\n- Test ar:// URI indexing with feedback submission\nEOF\n)\")",
+      "WebFetch(domain:sepolia.etherscan.io)",
+      "Bash(node -e:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

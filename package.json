@@ -1,15 +1,22 @@
 {
   "name": "arweave-agent-test",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "External test project for agent0-sdk Arweave integration and tagging functionality",
+  "main": "index.ts",
   "scripts": {
     "start": "tsx index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:tags": "tsx tests/check-arweave-tags.ts",
+    "test:feedback": "tsx tests/test-complete-arweave-feedback-flow.ts",
+    "test:verify": "tsx tests/verify-complete-flow.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "arweave",
+    "agent0",
+    "erc-8004",
+    "testing"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/node": "^24.9.2",
     "ts-node": "^10.9.2",
@@ -17,7 +24,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "agent0-sdk": "file:../agent0-ts/agent0-sdk-0.2.1.tgz",
+    "agent0-sdk": "file:agent0-sdk-0.2.1.tgz",
     "dotenv": "^17.2.3"
   }
 }
