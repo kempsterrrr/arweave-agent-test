@@ -24,7 +24,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "agent0-sdk": "file:agent0-sdk-0.2.1.tgz",
+    "agent0-sdk": "file:agent0-sdk-0.31.0.tgz",
     "dotenv": "^17.2.3"
   }
 }

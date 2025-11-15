@@ -24,7 +24,14 @@
       "Bash(node -e:*)",
       "Bash(python -m json.tool:*)",
       "Bash(npm uninstall:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git push)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git merge:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix: Update Arweave integration for ESM compatibility\n\nAfter merging main, updated all Arweave-related files to use .js extensions\nin imports (required for ESM module resolution in v0.31).\n\nChanges:\n- src/core/sdk.ts: Added arweave config to SDKConfig interface, arweaveClient property and getter\n- src/core/feedback-manager.ts: Added arweaveClient parameter to constructor  \n- src/core/arweave-client.ts: Updated all imports to use .js extensions\n- src/utils/arweave-tags.ts: Updated all imports to use .js extensions\n- src/utils/registration-format.ts: Updated imports to use .js extensions\n- src/core/sdk.ts: Pass arweaveClient to FeedbackManager constructor\n- package-lock.json: Regenerated after npm install\n\nAll TypeScript compilation errors resolved. Build passing.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(python3:*)"
     ],
     "deny": [],
     "ask": []
